@@ -2,8 +2,18 @@ import React from 'react'
 import SectionHead from '../SectionHead/SectionHead'
 import Container from "../Layout/Container";
 import SectionSubHead from '../SectionHead/SectionSubHead';
+import PhonesSvg from '../Svg/PhonesSvg'
+import ComputersSvg from '../Svg/ComputersSvg'
+import SmartWatchSvg from '../Svg/SmartWatchSvg'
+import CameraSvg from '../Svg/CameraSvg'
+import HeadPhonesSvg from '../Svg/HeadPhonesSvg'
+import GamingSvg from '../Svg/GamingSvg'
+import AlienSvg from '../Svg/AlienSvg'
+import CategorySlider from '../Slider/CategorySlider';
 
 const Category = () => {
+
+
   return (
     <div className='pt-[153px] pb-[95px] '>
        <Container>
@@ -13,10 +23,10 @@ const Category = () => {
         <SectionSubHead>
           Browse By Category
         </SectionSubHead>
-        <div className='mt-15'>
-           
-        </div>
-       <div></div>
+       
+       <div>
+        <CategorySlider />
+       </div>
        </Container>
     </div>
   )
