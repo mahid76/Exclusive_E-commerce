@@ -4,6 +4,33 @@
 @theme {
 	--font-primary: "Poppins", sans-serif;
 	--font-secondary: "Inter", sans-serif;
-	--color-primary: #DB4444;
-	--color-secondary: #FAFAFA;
+	--color-primary: #db4444;
+	--color-secondary: #fafafa;
+}
+.custom-slider .custom_slider {
+	display: flex !important;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, -100%);
+	column-gap: 12px;
+}
+
+.custom-slider .custom_slider .slick-active a div {
+	background: #db4444;
+	width: 10px;
+	height: 10px;
+	position: relative;
+}
+.custom-slider .custom_slider .slick-active a div::after {
+	content: "";
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	background: white;
+	border-radius: 50%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
 }

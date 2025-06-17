@@ -32,8 +32,8 @@ const BannerLeft = () => {
   ]
 
   return (
-    <div className=''>
-      <ul className='font-primary text-black flex flex-col gap-y-4'>
+    <div className=' '>
+      <ul className='font-primary text-black flex flex-col space-y-4'>
         {
         bannerCategories.map((item)=>(
           <li>{item.title}</li>
