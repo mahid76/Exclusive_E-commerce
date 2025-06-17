@@ -66,6 +66,6 @@ const BannerSlider = () => {
 			</Slider>
 		</div>
 	);
-};
+}; 
 
 export default BannerSlider;
