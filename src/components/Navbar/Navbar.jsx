@@ -41,7 +41,7 @@ const Navbar = () => {
 						</ul>
 					</div>
 					<div className=" flex items-center gap-x-5   ">
-						<div className="w-[243px] relative  ">
+						<div className="max-w-[243px] relative  ">
 							<input
 								className="w-full outline-0 rounded py-[10px] pl-5 pr-9  bg-[#F5F5F5] placeholder:text-[12px] font-primary "
 								type="search"
