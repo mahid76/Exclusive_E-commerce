@@ -6,6 +6,7 @@ const ComputersSvg = () => {
 				width="56"
 				height="56"
 				fill="none"
+				className="group"
 			>
 				<g
 					stroke="#000"
@@ -13,11 +14,11 @@ const ComputersSvg = () => {
 					stroke-width="2"
 					clip-path="url(#a)"
 				>
-					<path
+					<path className="group-hover:stroke-white" 
 						stroke-linejoin="round"
 						d="M46.667 9.333H9.333A2.333 2.333 0 0 0 7 11.667V35a2.333 2.333 0 0 0 2.333 2.333h37.334A2.333 2.333 0 0 0 49 35V11.667a2.333 2.333 0 0 0-2.333-2.334ZM16.333 46.667h23.334M21 37.333v9.334M35 37.333v9.334"
 					/>
-					<path d="M8 32h40" />
+					<path  className="group-hover:stroke-white" d="M8 32h40" />
 				</g>
 				<defs>
 					<clipPath id="a">

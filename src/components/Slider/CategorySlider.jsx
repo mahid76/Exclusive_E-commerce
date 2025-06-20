@@ -107,12 +107,12 @@ const CategorySlider = () => {
 		<div className="slider-container mt-15 ">
 			<Slider {...settings}>
 				{categoryItems.map((item, index) => (
-					<div key={index} className="w-full px-2 ">
-						<div className="border border-black/30 pt-[30px] pb-6 rounded flex flex-col   items-center ">
+					<div key={index} className="w-full px-2  ">
+						<div className="border group hover:bg-primary border-black/30 pt-[30px] hover:border-0 pb-6 rounded flex flex-col   items-center ">
 							<div className="flex  items-center justify-center">
 								{item.image}
 							</div>
-							<p className="font-primary leading-[22px] mt-[16px] text-center">
+							<p className="font-primary group-hover:text-white leading-[22px] mt-[16px] text-center">
 								{item.title}
 							</p>
 						</div>
