@@ -100,6 +100,9 @@ const CategorySlider = () => {
 		speed: 500,
 		slidesToShow: 6,
 		slidesToScroll: 1,
+		autoplay: true,
+    autoplaySpeed: 3000,
+		pauseOnHover: true,
 		nextArrow: <SampleNextArrow />,
 		prevArrow: <SamplePrevArrow />,
 	};

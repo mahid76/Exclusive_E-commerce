@@ -6,6 +6,7 @@
 	--font-secondary: "Inter", sans-serif;
 	--color-primary: #db4444;
 	--color-secondary: #fafafa;
+	--color-tertiary: #F5F5F5;
 }
 .custom-slider .custom_slider {
 	display: flex !important;
