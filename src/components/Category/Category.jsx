@@ -15,7 +15,7 @@ const Category = () => {
 
 
   return (
-    <div className='pt-[153px] pb-[95px] '>
+    <div className='pt-[153px]   '>
        <Container>
         <SectionHead>
           Categories
@@ -27,6 +27,7 @@ const Category = () => {
        <div>
         <CategorySlider />
        </div>
+       <div className='w-full h-[1px] bg-black/30 mt-[95px] '></div>
        </Container>
     </div>
   )
