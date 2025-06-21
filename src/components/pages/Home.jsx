@@ -8,6 +8,7 @@ import OfferBanner from '../OfferBanner/OfferBanner'
 import ExplorerProduct from '../ExplorerProduct/ExplorerProduct'
 import NewArrival from '../NewArrival/NewArrival'
 import Services from '../Services/Services'
+import Footer from '../Footer/Footer'
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
       <ExplorerProduct />
       <NewArrival />
       <Services />
+     <Footer />
     </>
   )
 }

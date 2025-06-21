@@ -15,7 +15,7 @@ const Services = () => {
       image :  <Service02 />  ,
       title:"24/7 CUSTOMER SERVICE",
       description:"Friendly 24/7 customer support",
-    },
+    }, 
     {
       image : <Service03 />   ,
       title:"MONEY BACK GUARANTEE",
