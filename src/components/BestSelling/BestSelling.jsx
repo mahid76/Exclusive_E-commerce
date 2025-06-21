@@ -16,7 +16,7 @@ const BestSelling = () => {
 			title: "The north coat",
 			price: "$260",
 			prevPrice: "$360",
-			review: "65,",
+			review: "65",
 			ratings: 5,
 		},
 		{
@@ -24,7 +24,7 @@ const BestSelling = () => {
 			title: "Gucci duffle bag",
 			price: "$960",
 			prevPrice: "$1160",
-			review: "65,",
+			review: "65",
 			ratings: 4.5,
 		},
 		{
@@ -32,7 +32,7 @@ const BestSelling = () => {
 			title: "RGB liquid CPU Cooler",
 			price: "$160",
 			prevPrice: "$170",
-			review: "65,",
+			review: "65",
 			ratings: 4.5,
 		},
 		{
@@ -40,7 +40,7 @@ const BestSelling = () => {
 			title: "Small BookSelf",
 			price: "$360",
 			prevPrice: " ",
-			review: "65,",
+			review: "65",
 			ratings: 5,
 		},
 	];
@@ -69,13 +69,16 @@ const BestSelling = () => {
 									{items.price}
 									<del className="text-black/50 ml-3">{items.prevPrice}</del>
 								</p>
-								<div className="flex icons ">
+							<div className="flex gap-x-2">
+									<div className="flex icons ">
 									<FaStar size={20} color="#FFAD33" />
 									<FaStar size={20} color="#FFAD33" /> 
 									<FaStar size={20} color="#FFAD33" />
 									<FaStar size={20} color="#FFAD33" />
 									<FaStar size={20} color="#FFAD33" />
 								</div>
+								<p className="text-sm font-primary leading-[21px] font-semibold text-black/50">({items.review})</p>
+							</div>
 							</div>
 						</div>
 					))}

@@ -5,6 +5,7 @@ import Banner from '../Banner/Banner'
 import Category from '../Category/Category'
 import BestSelling from '../BestSelling/BestSelling'
 import OfferBanner from '../OfferBanner/OfferBanner'
+import ExplorerProduct from '../ExplorerProduct/ExplorerProduct'
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <Category />
       <BestSelling />
       <OfferBanner />
+      <ExplorerProduct />
     </>
   )
 }
