@@ -8,6 +8,8 @@ import exProducts04 from '../../assets/exProducts04.png'
 
 import CardIcons from "../CardIcons/CardIcons";
 import { FaStar } from "react-icons/fa6";
+import PrimaryButton from "../Button/PrimaryButton";
+import { useState } from "react";
 
   const ourItems = [
     {
@@ -76,9 +78,80 @@ import { FaStar } from "react-icons/fa6";
       review: "145",
       ratings: 5,
     },
+    {
+      image: exProducts01,
+      title: "Breed Dry Dog Food",
+      price: "$100",
+      prevPrice: "",
+     
+      review: "35",
+      ratings: 5,
+    },
+    {
+      image: exProducts02,
+      title: "CANON EOS DSLR Camera",
+      price: "$360",
+      prevPrice: "",
+      review: "95",
+      ratings: 4.5,
+    },
+    {
+      image: exProducts03,
+      title: "ASUS FHD Gaming Laptop",
+      price: "$700",
+      prevPrice: "",
+      review: "325",
+      ratings: 4.5,
+    },
+    {
+      image: exProducts04,
+      title: "Curology Product Set",
+      price: "$500",
+      prevPrice: " ",
+      review: "145",
+      ratings: 5,
+    },
+    {
+      image: exProducts01,
+      title: "Breed Dry Dog Food",
+      price: "$100",
+      prevPrice: "",
+     
+      review: "35",
+      ratings: 5,
+    },
+    {
+      image: exProducts02,
+      title: "CANON EOS DSLR Camera",
+      price: "$360",
+      prevPrice: "",
+      review: "95",
+      ratings: 4.5,
+    },
+    {
+      image: exProducts03,
+      title: "ASUS FHD Gaming Laptop",
+      price: "$700",
+      prevPrice: "",
+      review: "325",
+      ratings: 4.5,
+    },
+    {
+      image: exProducts04,
+      title: "Curology Product Set",
+      price: "$500",
+      prevPrice: " ",
+      review: "145",
+      ratings: 5,
+    },
   ];
-
+ 
 const ExplorerProduct = () => {
+  
+  const [visible, setVisible] = useState(8)
+  const handleLoadData = ()=> {
+    setVisible((prev)=> prev + 4)
+  }
 	return (
 		<div className="pt-[161px] pb-[42px] ">
 			<Container>
@@ -87,7 +160,7 @@ const ExplorerProduct = () => {
 					<SectionSubHead>Explore Our Products</SectionSubHead>
 				</div>
         <div className="flex flex-wrap mt-15 gap-y-15 gap-x-[30px]">
-					{ourItems.map((items) => (
+					{ourItems.slice(0, visible).map((items) => (
 						<div>
 							<div className= " group  relative w-[270px] h-[250px]  bg-tertiary flex justify-center items-center py-[52px] px-[65px] rounded ">
 								<img src={items.image} alt="" />
@@ -116,6 +189,15 @@ const ExplorerProduct = () => {
 						</div>
 					))}
 				</div>
+       
+         {visible < ourItems.length && (
+          <div 
+            onClick={handleLoadData} 
+            className="cursor-pointer text-center mt-[76px]"
+          >
+            <PrimaryButton>View All Products</PrimaryButton>
+          </div>
+        )}
 			</Container>
 		</div>
 	);

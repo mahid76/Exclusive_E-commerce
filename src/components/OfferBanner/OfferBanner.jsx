@@ -28,7 +28,7 @@ const OfferBanner = () => {
 				</div>
         <div className="mt-10">
           <a href="#">
-            <button className="font-primary font-medium leading-6 text-secondary py-4 px-[48px] bg-[#00FF66]">
+            <button className="rounded font-primary font-medium leading-6 text-secondary py-4 px-[48px] bg-[#00FF66]">
               Buy Now!
             </button>
           </a>
