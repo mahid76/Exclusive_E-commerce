@@ -155,6 +155,8 @@ const Footer = () => {
 						</div>
 					</div>
 				</div>
+				<div className="w-full h-[1px] mt-15 bg-white/40 "></div>
+				<p className="">Copyright Rimel 2024. All right reserved</p>
 			</Container>
 		</section>
 	);
