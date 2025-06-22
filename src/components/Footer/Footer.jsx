@@ -52,7 +52,7 @@ const quickList = [
 
 const Footer = () => {
 	return (
-		<section className="py-[80px] bg-black ">
+		<section className="pt-[80px] pb-6 bg-black ">
 			<Container>
 				<div className="flex justify-between">
 					<div className="max-w-[217px]">
@@ -155,8 +155,8 @@ const Footer = () => {
 						</div>
 					</div>
 				</div>
-				<div className="w-full h-[1px] mt-15 bg-white/40 "></div>
-				<p className="">Copyright Rimel 2024. All right reserved</p>
+				<div className="w-full h-[1px] mt-15 bg-[#3d3d3d] "></div>
+				<p className="text-center mt-4 font-primary leading-6 text-[#3d3d3d] ">© Copyright Rimel 2024. All right reserved</p>
 			</Container>
 		</section>
 	);
