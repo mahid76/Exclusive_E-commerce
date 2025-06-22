@@ -1,16 +1,16 @@
 
-import './App.css'
-import Home from './components/pages/Home'
-import Products from './components/pages/Products'
+// import './App.css'
+// import Home from './components/pages/Home'
+// import Products from './components/pages/Products'
 
-function App() {
+// function App() {
 
-  return (
-    <>
-      <Home />
-      <Products />
-    </>
-  )
-}
+//   return (
+//     <>
+//       <Home />
+//       <Products />
+//     </>
+//   )
+// }
 
-export default App
+// export default App

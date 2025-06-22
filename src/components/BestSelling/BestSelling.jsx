@@ -1,4 +1,5 @@
 import { FaStar } from "react-icons/fa6";
+import { Link } from "react-router";
 import bestSelling01 from "../../assets/bestSelling01.png";
 import bestSelling02 from "../../assets/bestSelling02.png";
 import bestSelling03 from "../../assets/bestSelling03.png";
@@ -51,15 +52,19 @@ const BestSelling = () => {
 				<SectionHead>This Month</SectionHead>
 				<div className="flex items-center justify-between">
 					<SectionSubHead>Best Selling Products</SectionSubHead>
-					<PrimaryButton>View All</PrimaryButton>
+					<Link to={"/Products"}>
+						<PrimaryButton>View All</PrimaryButton>
+					</Link>
 				</div>
 				<div className="flex flex-wrap mt-15 gap-x-[30px]">
 					{bestItems.map((items) => (
 						<div>
-							<div className= " group  relative w-[270px] h-[250px]  bg-tertiary flex justify-center items-center py-[52px] px-[65px] rounded ">
+							<div className=" group  relative w-[270px] h-[250px]  bg-tertiary flex justify-center items-center py-[52px] px-[65px] rounded ">
 								<img src={items.image} alt="" />
 								<CardIcons className="absolute top-3 right-3" />
-								<div className="opacity-0 group-hover:opacity-100 duration-200  w-full bg-black text-center py-2 text-white font-primary font-medium absolute bottom-0 left-0 rounded-b" >Add To Cart</div>
+								<div className="opacity-0 group-hover:opacity-100 duration-200  w-full bg-black text-center py-2 text-white font-primary font-medium absolute bottom-0 left-0 rounded-b">
+									Add To Cart
+								</div>
 							</div>
 							<div className="mt-4">
 								<h3 className="font-primary font-medium leading-6 ">
@@ -69,16 +74,18 @@ const BestSelling = () => {
 									{items.price}
 									<del className="text-black/50 ml-3">{items.prevPrice}</del>
 								</p>
-							<div className="flex gap-x-2">
+								<div className="flex gap-x-2">
 									<div className="flex icons ">
-									<FaStar size={20} color="#FFAD33" />
-									<FaStar size={20} color="#FFAD33" /> 
-									<FaStar size={20} color="#FFAD33" />
-									<FaStar size={20} color="#FFAD33" />
-									<FaStar size={20} color="#FFAD33" />
+										<FaStar size={20} color="#FFAD33" />
+										<FaStar size={20} color="#FFAD33" />
+										<FaStar size={20} color="#FFAD33" />
+										<FaStar size={20} color="#FFAD33" />
+										<FaStar size={20} color="#FFAD33" />
+									</div>
+									<p className="text-sm font-primary leading-[21px] font-semibold text-black/50">
+										({items.review})
+									</p>
 								</div>
-								<p className="text-sm font-primary leading-[21px] font-semibold text-black/50">({items.review})</p>
-							</div>
 							</div>
 						</div>
 					))}
