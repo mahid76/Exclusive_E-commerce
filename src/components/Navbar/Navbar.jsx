@@ -3,23 +3,29 @@ import { GoPerson } from "react-icons/go";
 import { IoCartOutline, IoHeartOutline } from "react-icons/io5";
 import Container from "../Layout/Container";
 import Logo from "../Logo/Logo";
+import { Link } from "react-router";
 
 const Navbar = () => {
 	const navItem = [
 		{
 			title: "Home",
+			linkTo: "/"
 		},
 		{
 			title: "Product",
+			linkTo: "Products"
 		},
 		{
 			title: "Contact",
+			linkTo: "Contact"
 		},
 		{
 			title: "About",
+			linkTo: "About"
 		},
 		{
 			title: "Sign Up",
+			linkTo: "signUp"
 		},
 	];
 	return (
@@ -27,16 +33,16 @@ const Navbar = () => {
 			<Container>
 				<div className="flex  items-center justify-between">
 					<div className=" logo">
-						<a href="#">
+						<Link to={"/"} >
 							<Logo />
-						</a>
+						</Link>
 					</div>
 					<div className="">
 						<ul className="flex md:flex-row flex-col gap-x-[48px] text-black font-primary leading-6 items-center ">
 							{navItem.map((item) => (
-								<a href="#">
+								<Link to={item.linkTo} >
 									<li>{item.title}</li>
-								</a>
+								</Link>
 							))}
 						</ul>
 					</div>
