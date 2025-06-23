@@ -5,8 +5,7 @@ import Navbar from '../Navbar/Navbar'
 const Products = () => {
   return (
     <div>
-      <Header />
-      <Navbar />
+     
     </div>
   )
 }
