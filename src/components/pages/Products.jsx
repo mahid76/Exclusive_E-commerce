@@ -5,11 +5,13 @@ import ProductRight from "../ProductPage/ProductRight";
 const Products = () => {
 	return (
 		<Container>
-			<div className="flex py-[100px]" >
-				<div className="w-[238px]">
+			<div className="flex  py-[100px]" >
+				<div className="w-[20%]">
 					<ProductLeft />
 				</div>
-				<ProductRight />
+				<div className="w-[80%]">
+					<ProductRight />
+				</div>
 			</div>
 		</Container>
 	);
