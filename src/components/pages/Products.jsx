@@ -1,13 +1,18 @@
-import React from 'react'
-import Header from '../Header/Header'
-import Navbar from '../Navbar/Navbar'
+import Container from "../Layout/Container";
+import ProductLeft from "../ProductPage/ProductLeft";
+import ProductRight from "../ProductPage/ProductRight";
 
 const Products = () => {
-  return (
-    <div>
-     
-    </div>
-  )
-}
+	return (
+		<Container>
+			<div className="flex py-[100px]" >
+				<div className="w-[238px]">
+					<ProductLeft />
+				</div>
+				<ProductRight />
+			</div>
+		</Container>
+	);
+};
 
-export default Products
+export default Products;

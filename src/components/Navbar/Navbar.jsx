@@ -19,6 +19,7 @@ const Navbar = () => {
 			title: "Contact",
 			linkTo: "Contact"
 		},
+		
 		{
 			title: "About",
 			linkTo: "About"
