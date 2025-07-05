@@ -33,12 +33,12 @@ const ProductRight = () => {
 									{items.discountPercentage}
 								</del>
 							</p>
-							<div className="flex gap-x-2">
+							<div className="flex items-center gap-x-2">
 								<div className="flex icons ">
 									<ProductRating rating={items.rating} />
 								</div>
 								<p className="text-sm font-primary leading-[21px] font-semibold text-black/50">
-									({items.review})
+									({items.reviews.length})
 								</p>
 							</div>
 						</div>
