@@ -1,20 +1,32 @@
 import { useEffect, useState } from "react";
-import { FaStar } from "react-icons/fa6";
 import CardIcons from "../CardIcons/CardIcons";
 import ProductRating from "./ProductRating";
 
 const ProductRight = () => {
 	const [productData, setProductData] = useState([]);
+	const [currentPage, setCurrentPage] = useState(1);
 	useEffect(() => {
 		fetch("https://dummyjson.com/products")
 			.then((res) => res.json())
 			.then((data) => setProductData(data.products));
 	}, []);
 
+	const totalProducts = productData.length;
+	const productPerPage = 6;
+	const totalPages = Math.ceil(totalProducts / productPerPage);
+	const indexOfLastProducts = currentPage * productPerPage;
+	const indexOfFirstProducts = indexOfLastProducts - productPerPage;
+	const currentProduct = productData.slice(
+		indexOfFirstProducts,
+		indexOfLastProducts
+	);
+
+	const data = [...Array(totalPages).keys()].map((index) => index + 1);
+
 	return (
 		<div>
-			<div className="flex flex-wrap justify-between  gap-y-15 gap-x-[30px]">
-				{productData.map((items) => (
+			<div className="flex flex-wrap   gap-y-15 gap-x-[30px]">
+				{currentProduct.map((items) => (
 					<div>
 						<div className=" group  relative w-[270px] h-[250px]  bg-tertiary flex justify-center items-center py-[52px] px-[65px] rounded ">
 							<img src={items.thumbnail} alt="" />
@@ -42,6 +54,20 @@ const ProductRight = () => {
 								</p>
 							</div>
 						</div>
+					</div>
+				))}
+			</div>
+			<div className="flex mt-10 gap-x-[10px] ">
+				{data.map((items) => (
+					<div
+						onClick={() => setCurrentPage(items)}
+						className={`cursor-pointer py-[2px] px-[25px] font-primary leading-6    rounded ${
+							currentPage === items
+								? "bg-gray-300 text-black"
+								: "bg-black text-white"
+						} `}
+					>
+						{items}
 					</div>
 				))}
 			</div>
