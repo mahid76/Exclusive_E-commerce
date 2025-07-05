@@ -5,6 +5,7 @@ import MainRoute from "./components/MainRoute/MainRoute";
 import Home from "./components/pages/Home";
 import Products from "./components/pages/Products";
 import "./index.css";
+import ProductDetails from "./components/pages/ProductDetails";
 
 const router = createBrowserRouter([
 	{
@@ -12,7 +13,8 @@ const router = createBrowserRouter([
 		Component: MainRoute,
 		children: [
 			{ index: true, Component: Home },
-			{ path: "products", Component: Products },
+			{ path: "/products", Component: Products },
+			{ path: "/product/:id", Component: ProductDetails },
 		],
 	},
 ]);

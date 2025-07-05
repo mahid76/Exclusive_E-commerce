@@ -13,16 +13,16 @@ const Navbar = () => {
 		},
 		{
 			title: "Product",
-			linkTo: "Products"
+			linkTo: "products"
 		},
 		{
 			title: "Contact",
-			linkTo: "Contact"
+			linkTo: "contact"
 		},
 		
 		{
 			title: "About",
-			linkTo: "About"
+			linkTo: "about"
 		},
 		{
 			title: "Sign Up",
