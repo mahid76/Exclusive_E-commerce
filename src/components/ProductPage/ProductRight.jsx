@@ -1,6 +1,7 @@
-import { useState ,useEffect } from "react";
+import { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa6";
 import CardIcons from "../CardIcons/CardIcons";
+import ProductRating from "./ProductRating";
 
 const ProductRight = () => {
 	const [productData, setProductData] = useState([]);
@@ -28,15 +29,13 @@ const ProductRight = () => {
 							</h3>
 							<p className="font-primary py-2 font-medium leading-6 text-primary ">
 								${items.price}
-								<del className="text-black/50 ml-3">{items.discountPercentage}</del>
+								<del className="text-black/50 ml-3">
+									{items.discountPercentage}
+								</del>
 							</p>
 							<div className="flex gap-x-2">
 								<div className="flex icons ">
-									<FaStar size={20} color="#FFAD33" />
-									<FaStar size={20} color="#FFAD33" />
-									<FaStar size={20} color="#FFAD33" />
-									<FaStar size={20} color="#FFAD33" />
-									<FaStar size={20} color="#FFAD33" />
+									<ProductRating rating={items.rating} />
 								</div>
 								<p className="text-sm font-primary leading-[21px] font-semibold text-black/50">
 									({items.review})
