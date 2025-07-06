@@ -1,11 +1,14 @@
-import React from 'react'
+import Container from "../Layout/Container";
 
 const SingleProductDetail = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+	return (
+		<div className="py-30">
+			<Container>
 
-export default SingleProductDetail
+
+      </Container>
+		</div>
+	);
+};
+
+export default SingleProductDetail;

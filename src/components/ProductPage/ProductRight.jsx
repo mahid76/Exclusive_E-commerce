@@ -28,7 +28,7 @@ const ProductRight = () => {
 		<div>
 			<div className="flex flex-wrap   gap-y-15 gap-x-[30px]">
 				{currentProduct.map((items) => (
-					<Link to={`/product/${items.id}`}>
+					<Link to={`/products/${items.id}`}>
 						<div className=" group  relative w-[270px] h-[250px]  bg-tertiary flex justify-center items-center py-[52px] px-[65px] rounded ">
 							<img src={items.thumbnail} alt="" />
 							<CardIcons className="absolute top-3 right-3" />
