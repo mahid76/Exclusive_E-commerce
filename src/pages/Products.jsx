@@ -1,6 +1,6 @@
-import Container from "../Layout/Container";
-import ProductLeft from "../ProductPage/ProductLeft";
-import ProductRight from "../ProductPage/ProductRight";
+import Container from "../components/Layout/Container";
+import ProductLeft from "../components/ProductPage/ProductLeft";
+import ProductRight from "../components/ProductPage/ProductRight";
 
 const Products = () => {
 	return (
