@@ -10,12 +10,12 @@ const SmartWatchSvg = () => {
 			>
 				<g
 					stroke="#000"
-					stroke-linecap="round"
-					stroke-width="2"
-					clip-path="url(#a)"
+					strokeLinecap="round"
+					strokeWidth="2"
+					clipPath="url(#a)"
 				>
 					<path className="group-hover:stroke-white"
-						stroke-linejoin="round"
+						strokeLinejoin="round"
 						d="M35 14H21a7 7 0 0 0-7 7v14a7 7 0 0 0 7 7h14a7 7 0 0 0 7-7V21a7 7 0 0 0-7-7ZM21 42v7h14v-7M21 14V7h14v7"
 					/>
 					<path className="group-hover:stroke-white" d="M24 23v11M28 28v6M32 26v8" />

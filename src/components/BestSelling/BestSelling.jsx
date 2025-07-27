@@ -58,7 +58,7 @@ const BestSelling = () => {
 				</div>
 				<div className="flex flex-wrap mt-15 gap-x-[30px]">
 					{bestItems.map((items) => (
-						<div>
+						<div key={items.title}>
 							<div className=" group  relative w-[270px] h-[250px]  bg-tertiary flex justify-center items-center py-[52px] px-[65px] rounded ">
 								<img src={items.image} alt="" />
 								<CardIcons className="absolute top-3 right-3" />

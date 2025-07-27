@@ -1,32 +1,32 @@
 import { CiSearch } from "react-icons/ci";
 import { GoPerson } from "react-icons/go";
 import { IoCartOutline, IoHeartOutline } from "react-icons/io5";
+import { Link } from "react-router";
 import Container from "../Layout/Container";
 import Logo from "../Logo/Logo";
-import { Link } from "react-router";
 
 const Navbar = () => {
 	const navItem = [
 		{
 			title: "Home",
-			linkTo: "/"
+			linkTo: "/",
 		},
 		{
 			title: "Product",
-			linkTo: "products"
+			linkTo: "products",
 		},
 		{
 			title: "Contact",
-			linkTo: "contact"
+			linkTo: "contact",
 		},
-		
+
 		{
 			title: "About",
-			linkTo: "about"
+			linkTo: "about",
 		},
 		{
 			title: "Sign Up",
-			linkTo: "signUp"
+			linkTo: "signUp",
 		},
 	];
 	return (
@@ -34,16 +34,16 @@ const Navbar = () => {
 			<Container>
 				<div className="flex  items-center justify-between">
 					<div className=" logo">
-						<Link to={"/"} >
+						<Link to={"/"}>
 							<Logo />
 						</Link>
 					</div>
 					<div className="">
 						<ul className="flex md:flex-row flex-col gap-x-[48px] text-black font-primary leading-6 items-center ">
 							{navItem.map((item) => (
-								<Link to={item.linkTo} >
-									<li>{item.title}</li>
-								</Link>
+								<li key={item.title}>
+									<Link to={item.linkTo}>{item.title}</Link>
+								</li>
 							))}
 						</ul>
 					</div>
