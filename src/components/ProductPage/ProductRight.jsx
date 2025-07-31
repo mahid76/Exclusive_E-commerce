@@ -13,7 +13,7 @@ const ProductRight = () => {
 	}, []);
 
 	const totalProducts = productData.length;
-	const productPerPage = 6;
+	const productPerPage = 9;
 	const totalPages = Math.ceil(totalProducts / productPerPage);
 	const indexOfLastProducts = currentPage * productPerPage;
 	const indexOfFirstProducts = indexOfLastProducts - productPerPage;
@@ -26,7 +26,7 @@ const ProductRight = () => {
 
 	return (
 		<div>
-			<div className="flex flex-wrap   gap-y-15 gap-x-[30px]">
+			<div className="flex flex-wrap justify-between gap-y-14 gap-x-[30px]">
 				{currentProduct.map((items) => (
 					<Link to={`/products/${items.id}`}>
 						<div className=" group  relative w-[270px] h-[250px]  bg-tertiary flex justify-center items-center py-[52px] px-[65px] rounded ">
