@@ -4,11 +4,9 @@ import singlePage from "../../assets/singlePage.png";
 import Container from "../Layout/Container";
 import ProductRating from "../ProductPage/ProductRating";
 import ColourSelector from "./ColourSelector ";
-
+import SizeSelector from "./SizeSelector";
 
 const SingleProductDetail = () => {
-	
-
 	const { id } = useParams();
 	const [productData, setProductData] = useState([]);
 
@@ -23,25 +21,18 @@ const SingleProductDetail = () => {
 	return (
 		<div className="py-30">
 			<Container>
-				<div className="flex ">
-					<div className=" flex flex-col gap-4 ">
-						<div className="w-[170px] h-[138px] rounded bg-[#F5F5F5] flex justify-center items-center ">
-							<img src={singlePage} className="w-[122px]" alt="" />
-						</div>
-						<div className="w-[170px] h-[138px] rounded bg-[#F5F5F5] flex justify-center items-center ">
-							<img src={singlePage} className="w-[122px]" alt="" />
-						</div>
-						<div className="w-[170px] h-[138px] rounded bg-[#F5F5F5] flex justify-center items-center ">
-							<img src={singlePage} className="w-[122px]" alt="" />
-						</div>
-						<div className="w-[170px] h-[138px] rounded bg-[#F5F5F5] flex justify-center items-center ">
-							<img src={singlePage} className="w-[122px]" alt="" />
-						</div>
+				<div className="grid grid-cols-12 ">
+					<div className=" col-span-2  flex flex-col  ">
+						{singleProduct?.images.map((img) => (
+							<div className="px-6 py-3 rounded bg-[#F5F5F5] flex justify-center items-center ">
+								<img src={img} className="w-[122px]" alt="" />
+							</div>
+						))}
 					</div>
-					<div className="bg-[#F5F5F5] px-[27px] ml-[30px] flex justify-center items-center rounded ">
+					<div className="bg-[#F5F5F5] col-span-5 px-[27px] py-[130px] ml-[30px] flex justify-center items-center rounded ">
 						<img src={singlePage} className="w-[446px]" alt="" />
 					</div>
-					<div className="ml-[70px] ">
+					<div className="ml-[70px] col-span-5 ">
 						<div className="text">
 							<h3 className="text-black font-secondary font-semibold text-2xl leading-6 tracking-[3%]">
 								{singleProduct?.title}
@@ -67,10 +58,15 @@ const SingleProductDetail = () => {
 							<div className="bg-[#808080] w-full h-[1px] my-6"></div>
 						</div>
 						<div className="flex items-center">
-							<h3 className="font-secondary text-[20px] leading-5 text-black ">Colours:</h3>
+							<h3 className="font-secondary text-[20px] leading-5 text-black ">
+								Colours:
+							</h3>
 							<div>
 								<ColourSelector />
 							</div>
+						</div>
+						<div className="mt-6">
+							<SizeSelector />
 						</div>
 					</div>
 				</div>
