@@ -1,17 +1,17 @@
-import { useEffect,  useState } from "react";
+import { useEffect, useState } from "react";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
-import {  useParams } from "react-router";
+import { useParams } from "react-router";
 import PrimaryButton from "../Button/PrimaryButton";
 import Container from "../Layout/Container";
-
 import ProductRating from "../ProductPage/ProductRating";
 import SectionHead from "../SectionHead/SectionHead";
 import ColourSelector from "./ColourSelector ";
 import QuantityIncrease from "./QuantityIncrease";
-import SizeSelector from "./SizeSelector";
 import RandomProduct from "./RandomProduct";
+import SizeSelector from "./SizeSelector";
 
 const SingleProductDetail = () => {
+	
 	const [isLiked, setIsLiked] = useState(true);
 	const { id } = useParams();
 	const [productData, setProductData] = useState([]);
@@ -24,6 +24,13 @@ const SingleProductDetail = () => {
 
 	const singleProduct = productData.find((product) => product.id == id);
 
+	const [selectedImage, setSelectedImage] = useState();
+
+	useEffect(() => {
+		if (singleProduct?.thumbnail) {
+			setSelectedImage(singleProduct?.thumbnail);
+		}
+	}, [singleProduct]);
 	return (
 		<div className="py-30">
 			<Container>
@@ -31,12 +38,12 @@ const SingleProductDetail = () => {
 					<div className=" col-span-2  flex flex-col gap-4 ">
 						{singleProduct?.images.map((img) => (
 							<div className="px-6 py-3 rounded bg-[#F5F5F5] flex justify-center items-center ">
-								<img src={img} className="w-[122px]" alt="" />
+								<img onClick={()=> setSelectedImage(img)} src={img} className="w-[122px]" alt="" />
 							</div>
 						))}
 					</div>
 					<div className="bg-[#F5F5F5] col-span-5 px-[27px] py-[100px] ml-[30px] flex justify-center items-center rounded ">
-						<img src={singleProduct?.thumbnail} className="w-[446px]" alt="" />
+						<img src={selectedImage} className="w-[446px]" alt="" />
 					</div>
 					<div className="ml-[70px] col-span-5 ">
 						<div className="text">

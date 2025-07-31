@@ -12,8 +12,8 @@ const QuantityIncrease = () => {
 						setquantityIncrease(quantityIncrease - 1);
 					}
 				}}
-				className={`cursor-pointer text-center border-r px-3 flex justify-center group hover:bg-primary hover:border-primary items-center py-[22px] border-gray-300 ${
-					quantityIncrease === 0 ? "opacity-50 cursor-not-allowed" : ""
+				className={` text-center border-r px-3 flex justify-center group hover:bg-primary hover:border-primary items-center py-[22px] border-gray-300 ${
+					quantityIncrease === 0 ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
 				}`}
 			>
 				<GoDash className="group-hover:text-white" />
