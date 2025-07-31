@@ -1,12 +1,17 @@
 import { useEffect, useState } from "react";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { useParams } from "react-router";
 import singlePage from "../../assets/singlePage.png";
+import PrimaryButton from "../Button/PrimaryButton";
 import Container from "../Layout/Container";
+
 import ProductRating from "../ProductPage/ProductRating";
 import ColourSelector from "./ColourSelector ";
+import QuantityIncrease from "./QuantityIncrease";
 import SizeSelector from "./SizeSelector";
 
 const SingleProductDetail = () => {
+	const [isLiked, setIsLiked] = useState(true);
 	const { id } = useParams();
 	const [productData, setProductData] = useState([]);
 
@@ -65,8 +70,22 @@ const SingleProductDetail = () => {
 								<ColourSelector />
 							</div>
 						</div>
-						<div className="mt-6">
+						<div className="my-6">
 							<SizeSelector />
+						</div>
+						<div className="flex gap-4 items-center">
+							<div>
+								<QuantityIncrease />
+							</div>
+							<div>
+								<PrimaryButton className="py-[10px]">Buy Now</PrimaryButton>
+							</div>
+							<div
+								onClick={() => setIsLiked(!isLiked)}
+								className="border border-gray-300 py-[11px] px-[10px] rounded cursor-pointer "
+							>
+								{isLiked ? <FaRegHeart  /> : <FaHeart className="text-primary" />}
+							</div>
 						</div>
 					</div>
 				</div>

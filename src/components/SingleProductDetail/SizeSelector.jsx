@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const SizeSelector = () => {
- const [selectedSize, setSelectedSize] = useState('M');
+ const [selectedSize, setSelectedSize] = useState('');
   
   const sizes = ['XS', 'S', 'M', 'L', 'XL'];
 
