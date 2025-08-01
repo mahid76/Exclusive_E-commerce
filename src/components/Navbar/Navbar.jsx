@@ -64,10 +64,10 @@ const Navbar = () => {
 						<a href="#">
 							<IoHeartOutline size={20} />
 						</a>
-						<a href="#">
+						<Link to={"/cart"} >
 							{" "}
 							<IoCartOutline size={20} />
-						</a>
+						</Link>
 						<a href="#">
 							<GoPerson size={20} />
 						</a>

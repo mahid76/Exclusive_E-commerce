@@ -9,7 +9,6 @@ import ColourSelector from "./ColourSelector ";
 import QuantityIncrease from "./QuantityIncrease";
 import RandomProduct from "./RandomProduct";
 import SizeSelector from "./SizeSelector";
-
 const SingleProductDetail = () => {
 	
 	const [isLiked, setIsLiked] = useState(true);
