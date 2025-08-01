@@ -26,6 +26,14 @@ const ProductRight = () => {
 
 	return (
 		<div>
+			<div className="flex justify-end items-center gap-3 mb-[30px]">
+				<p className="text-right text-black font-primary leading-6   ">Show :</p>
+				<div className="w-[97px] border border-[#D9D9D9] rounded-[5px] text-center " >
+					<p>
+						{productPerPage}
+					</p>
+				</div>
+			</div>
 			<div className="flex flex-wrap justify-between gap-y-14 gap-x-[30px]">
 				{currentProduct.map((items) => (
 					<Link to={`/products/${items.id}`}>

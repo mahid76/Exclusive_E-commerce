@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
-import { useParams } from "react-router";
+import { Link, useParams } from "react-router";
 import PrimaryButton from "../Button/PrimaryButton";
 import Container from "../Layout/Container";
 import ProductRating from "../ProductPage/ProductRating";
@@ -84,8 +84,10 @@ const SingleProductDetail = () => {
 							<div>
 								<QuantityIncrease />
 							</div>
-							<div>
-								<PrimaryButton className="py-[10px]">Buy Now</PrimaryButton>
+							<div >
+								<Link to={"/cart"}>
+								<PrimaryButton className="py-[10px]">Add to Cart</PrimaryButton>
+								</Link>
 							</div>
 							<div
 								onClick={() => setIsLiked(!isLiked)}
