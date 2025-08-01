@@ -23,7 +23,7 @@ const Services = () => {
     },
   ]
   return (
-    <div className='pt-[182px] pb-[167px] '>
+    <div className=' '>
       <Container>
        <div className='pl-[120px] pr-[107px] '>
          <div className='flex justify-between '>

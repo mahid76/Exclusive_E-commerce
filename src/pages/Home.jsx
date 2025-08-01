@@ -1,6 +1,6 @@
+import Banner from "../components/Banner/Banner";
 import BestSelling from "../components/BestSelling/BestSelling";
 import Category from "../components/Category/Category";
-import Banner from "../components/Banner/Banner";
 import ExplorerProduct from "../components/ExplorerProduct/ExplorerProduct";
 import NewArrival from "../components/NewArrival/NewArrival";
 import OfferBanner from "../components/OfferBanner/OfferBanner";
@@ -15,7 +15,9 @@ const Home = () => {
 			<OfferBanner />
 			<ExplorerProduct />
 			<NewArrival />
-			<Services />
+			<div className="pt-[182px] pb-[167px]">
+				<Services />
+			</div>
 		</>
 	);
 };
