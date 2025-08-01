@@ -1,6 +1,7 @@
-import Container from "../components/Layout/Container";
-import CartTotal from "../components/CartPage/CartTotal";
+import CartButton from "../components/CartPage/CartButton";
 import CartDetails from "../components/CartPage/CartDetails";
+import CartTotal from "../components/CartPage/CartTotal";
+import Container from "../components/Layout/Container";
 
 const Cart = () => {
 	return (
@@ -8,7 +9,7 @@ const Cart = () => {
 			<Container>
 				<div>
 					<CartDetails />
-					
+					<CartButton />
 					<CartTotal />
 				</div>
 			</Container>
